@@ -1,0 +1,87 @@
+Debugging in Python can be effectively done using breakpoints, which allow you to pause the execution of your code
+and inspect the current state of the program. You can use breakpoints in various ways, including using an 
+integrated development environment (IDE) or using the built-in `pdb` module. Here are examples of both methods:
+
+Method 1: Using `pdb` Module
+
+Python's built-in debugger (`pdb`) allows you to set breakpoints directly in your code. Here’s how you can use it:
+
+1. Set a Breakpoint:
+   To set a breakpoint in your code, you can use the `pdb.set_trace()` function. This will pause the execution 
+   when it reaches that line.
+
+2. Inspect Variables:
+   Once execution is paused, you can inspect variables, step through code, and continue execution.
+
+Here’s an example:
+
+```python
+import pdb
+
+def calculate_sum(a, b):
+    pdb.set_trace()  # Set a breakpoint here
+    total = a + b
+    return total
+
+result = calculate_sum(5, 10)
+print("The result is:", result)
+```
+
+### Example Workflow with `pdb`
+
+1. Run the script:
+   When you run the script, the execution will pause at the line with `pdb.set_trace()`.
+
+2. Interactive Commands:
+   At the breakpoint, you can use several commands:
+   - `n` (next): Execute the next line.
+   - `c` (continue): Continue execution until the next breakpoint.
+   - `p variable_name`: Print the value of `variable_name`.
+   - `q`: Quit the debugger.
+
+For instance, while at the breakpoint:
+```plaintext
+> <ipython-input-1-b0e63730fc0f>(4)calculate_sum()
+-> total = a + b
+(Pdb) p a
+5
+(Pdb) p b
+10
+(Pdb) n
+```
+
+### Method 2: Using an IDE (e.g., PyCharm, VS Code)
+
+Most modern IDEs provide built-in support for debugging with graphical interfaces. Here’s how you can set breakpoints using VS Code as an example:
+
+1. Open Your Script:
+   Open your Python file in VS Code.
+
+2. Set a Breakpoint:
+   Click in the left margin next to the line number where you want to set a breakpoint. A red dot will appear, indicating a breakpoint is set.
+
+3. Start Debugging:
+   Click on the debug icon (or press `F5`) to start debugging. The execution will pause at the breakpoint.
+
+4. Use Debugging Tools:
+   Use the debugging panel to inspect variables, step over lines, step into functions, and continue execution. You can also evaluate expressions in the debug console.
+
+### Example with VS Code
+
+1. Set a Breakpoint:
+   In your Python file:
+   ```python
+   def multiply(a, b):
+       result = a * b
+       return result
+
+   print(multiply(4, 5))
+   ```
+
+   Click next to the `result = a * b` line to set a breakpoint.
+
+2. Start Debugging:
+   Start debugging. The program will pause at the breakpoint.
+
+3. nspect Variables:
+   Use the variables panel to see the current values of `a` and `b`. Use the debug console to enter commands and evaluate expressions.

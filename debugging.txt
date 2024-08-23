@@ -1,0 +1,216 @@
+
+Debugging is finding erors or bugs in your source code and then fixing them.
+A bug is written code which is not given us the desired Output. Or 
+is a glitch that prevents code from giving us desired output.
+
+IMPORTANCES OF LEARNING HOW TO DEBBUG:-
+* It helps us to quickly solve problems in our code.
+* To have desired output from our code.
+* To improve our productivity.
+* To enhance code quality.
+
+EXAMPLE OF BUGS:-
+1. Syntax Error
+2. Logical Error
+3. Value Error
+4. Type Error 
+5. Function Error
+6. Name Error
+
+CLASSIFICATION OF BUGS:-
+1.SYNTAX ERROR (coding bug) while writting For Example this normally happens when you missuse functions, variables
+And parameters, and are normally identified by the IDE. (creating variables with no value).
+2.LOGICAL ERRORS(how you solve the problem): these are errors that occur when steps taken to solve a problem are not
+correct.
+       Eg: an infinite loop
+here the program works with out errors but does not produce expected result.
+3.DESIGN BUGS: this are bugs that come about through misunderstanding something in the design stage Causing the program
+to do what it is supposed to do but not the right thing to do .
+4.RUN TIME BUGGS/ERRORS : this are bugs that occur when the computer tries to performe a task that can not be perfomed
+And they are discovered after running a code or program.
+       Eg: Zero-division error
+
+DEBBUGING CYCLE:-
+STEP 0NE: Writting code
+STEP TWO: Check whether code is working
+STEP THREE: If it isnot working then we debug it
+STEP FOUR: If it is working then you go back to coding
+
+THE BUG SEEKING CYCLE:-
+STEP ONE: Writting code.
+STEP TWO: Trying to break the code (testing).
+STEP THREE: If you succeed breaking it then you debug.
+STEP FOUR: If you fail to break it then you continue coding
+
+TIPS/PRINCIPALS OF DEBUGGING:-
+TIP 1: Cut the bugs as early as possible: This is early because details are still in  your mind and you know where to look.
+TIP 2: Only have One bug at a time.
+TIP 3: Always look where you have been working from if you trying to look for bug.
+TIP 4: Work in small parts,avoid large chunks(lines) of code.
+TIP 5: If you using github always use small comments.
+
+STEPS OF DEBUGGING:-
+STEP 1: Plan your attack.(know where you are going to start).
+STEP 2: Back up your files using github to keep track your script.
+STEP 3: Isolate a block of code or modules with an issue by commenting it out.
+STEP 4: Finding the actual line with an error.
+STEP 5: Fix the error,do not patch(leave) it.
+STEP 6: Test the fix you have just done.
+STEP 7: Look for similar bug.
+
+OTHER STEPS ANS STRATEGIES:-
+STEP 1: Reproducibility: we need to understand the bug before you trying to fixing it(causes and effect).
+STEP 2: Reduction: finding the simplest or smallest task that shows or exposses the bug.
+        Reduce the search space because bugs are not random, they come from somewhere in the code.
+STEP 3: Deduction: find out what the program is doing (the components in the program).
+STEP 4: Pair programming: someone else will be able to see which mistake you have made or wromg assumptions.
+        It helps you to understand what you tying to achieve with this code as you are explaining it to someone else.   
+STEP 5: Liveranging experience from others: seeking solutions from more experiencing programmers.
+
+
+PREVENTIVE MEASSURES FROM BUGS.
+1.Clean and easy code to read for example identing well and not repeating yourself.
+2.Commenting: it helps you to figure out what your code suppose to be doing.
+3.Making One change at a time.#checking your code line by line and make change if is needed.
+4. Testing your code : 
+    A->Unit-test:testing functional blocks of your code .
+    B->Integrational test: interaction between the functional blocks of your code for example the UI and the database.
+    C->Test with Valid and Invalid data: what happens to your code when it runs with both valid and invalid data.
+5.Defensive programming: Adding error checking code and throwing exceptions .
+6.Incubating(resting)#the writer takes time to refresh his/her self.
+
+DEBUGGING TOOLS.
+->Real time code analysis:this refers to the process of analysing code as it is being written or executed, providing the developer with immediate feedback.
+    this analysis is often performed by specialist tools or plugins integrated into the IDEs or code editors 
+
+Real time code analysis tools can perform variuos checks and validtaions including:
+1->Syntax checking : detecting syntax errors, missing or misplaced paranthesis,brackets , semicolon and any other syntatic issues .
+2->Static code analysis: analysing  your code structure , identifying potential bug and suggesting improvement based on redefine tools for example 
+detecting  unused variables , code dublication and potential performance issues.
+3->Code formatting : enforcing consistent code formatting guidelines , such as identation , line spacing  or naming conventions.
+4-> Code Linting(red lines) : analysing code for potential stylistic issues or deviations from best practices, based on predefined rules or community standards.
+    this can include enforcing consistent code style or checking all identified anti-patterns.
+5-> Code completion: providing intelligent suggestions or  auto-completion of code elements such as variable , functions or method name based on the context and available libraries or frameworks.
+6-> Type checking: verifying the correctness of variable types and detecting type related errors or inconsistancies 
+espicailly statically type languages (c# c++)
+7-> Security analysis: Scanning the code for all potential security vulnerabilities such sql injection,cross site scripting
+or insecure data handling practices 
+
+These tools typically analyse the code in the background while you are coding,providing feedback through vissual indicator,
+Highlighting or inline suggestion.
+They can help catch errors, improve code quality, enforce coding standards and enhance deveolper productivity by reducing
+debbuging time.
+Popular Examples of real time code analyse tool include:-
+ESlint.
+TSlint for javascript and typescript.
+pylint for python.
+RuboCop for Ruby.
+Sonarlint which support multiple programming languages.
+
+Integrated Development Environment(IDE) LIKE visual studio code,pycharm often came with built in or plugging based 
+Real time code analyses features
+
+SEVERAL TOOLS/TECHNIQUES AVAILLABLE TO AID IN DEBBUGING. here are some common used tools for debbuging:
+A-> DEBBUGERS: Are stand alone tools or features built into IDE that allow you to execute code step by step, inspect
+variables,set break points and analyse the program execution flow. 
+POPULAR DEBBUGERS INCLUDE GDB For C or C++ programs,PDB For python programs.
+B-> LOGGING: Logging is the practice of reccording specific information during program excution to aiding debbuging.
+    Logging frameworks include :- Log4j (Java), log4net (.NET) or python logging module that allows to insert logg statement
+    at critical point in your code and output relevent information such as variable values or error messages.
+C-> Integrated Development Environment(IDE): is a such as vissual studio code or pycharm provide comprehensive debbuging features.
+they offer tools LIKE break points, variable inspection, step by step execution and real time code analysis .
+D-> PROFILERS: profilers help identify performance bottle necks and optimize code . they provide insights into the
+progams run time behavior, include memory usage, CPU usage and function call timings
+        POPULAR PROFILER INCLUDE:- visualVM,Xdebug or C profile for python
+E-> CONSOLE OUTPUT: simple print statement or console output can be effective in debuging . you can insert print statement
+at various points in your code .
+F-> BROWSER DEVELOPER TOOLS: when debuging web applications, browser developer tools like chrome devtool o firefox developer
+tools come in handy .
+They provide a range of features for inspecting and debbuging HTML,CSS and JAVASCRIPT code including break points,console logging
+Network monitoring and DOM inspection. 
+G-> UNIT TESTING FRAMEWORK: such as JUNIT(java), NUNIT(.Net),PYTEST(python) are not strictly debbuging tool but they
+can help detect and isolate bugs by allowing you to wwrite tests that validate the behavior of individual components
+of your code base .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#linters use in python
+
+Linters are tools that analyze code to identify potential errors, enforce coding standards, 
+and improve code quality. In Python, several linters are commonly used, each with its own focus and features. 
+Here are some popular Python linters:
+
+1. Pylint: Offers a wide range of checks for code quality, coding standards, and error detection. It also provides a customizable configuration.
+
+2. Flake8: Combines checks from several tools, including Pyflakes (for error detection), pycodestyle (for PEP 8 compliance), and McCabe (for cyclomatic complexity). 
+It's known for its speed and simplicity.
+
+3. pycodestyle: Focuses on enforcing PEP 8 style guide conventions. It doesn’t check for code errors but ensures adherence to coding standards.
+
+4. mypy: Primarily a type checker that ensures your code adheres to type annotations and can catch type-related errors. It’s useful for projects using type hints.
+
+5. Bandit: Specializes in security issues, analyzing code to find common security vulnerabilities and potential issues.
+
+6. Prospector: A tool that aggregates the results from other linters and analysis tools to provide a comprehensive view of code quality.
+
+7. Black: While technically a code formatter rather than a linter, it enforces consistent code style by automatically reformatting code according to a fixed style.
+
+
+In Python, the terms error handling and exception handling are often used interchangeably, but they can have slightly different connotations. Generally, exception handling is the more accurate term because 
+it refers to the specific mechanism that allows you to handle runtime errors or exceptions. Here’s a deeper look into exception handling in Python.
+
+### What is Exception Handling?
+
+Exception handling in Python allows you to manage errors that occur during program execution, 
+enabling your program to continue running or exit gracefully instead of crashing. 
+
+### Key Components of Exception Handling
+
+1. `try` block: The code that might raise an exception is placed inside a `try` block.
+
+2. `except` block: This block allows you to catch and handle specific exceptions. You can have multiple `except` blocks to handle different types of exceptions.
+
+3. `else` block: This optional block will run if the code in the `try` block does not raise any exceptions.
+
+4. `finally` block: This block will always execute regardless of whether an exception was raised or not, making it useful for cleanup actions.
+
+
+
